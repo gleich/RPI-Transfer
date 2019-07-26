@@ -8,6 +8,6 @@ def run_command(command, capture_output):
     :return: None
     """
     if capture_output:
-        return os.popen(command).read
+        return os.popen(command).read()
     else:
         os.system(command)
