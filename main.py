@@ -7,7 +7,7 @@ def main():
     Runs the whole program
     :return: None
     """
-    os.system("cd ~/../../media/pi")
+    os.chdir("~/../../media/pi")
     with open("settings.json") as settings_json:
         settings = load(settings_json)
     drive = settings["drive-name"]
