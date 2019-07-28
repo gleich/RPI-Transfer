@@ -27,7 +27,7 @@ def main():
             file_path = "/" + card + "/" + file
             file_paths.append(file_path)
     for path in file_path:
-        os.system("mv " + path + " " + drive)
+        os.system("cp " + path + " " + drive)
 
 
 if __name__ == "__main__":
