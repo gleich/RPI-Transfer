@@ -7,7 +7,8 @@ def main():
     Runs the whole program
     :return: None
     """
-    os.chdir("~/../../media/pi")
+    os.system("cd ~/../../media/pi")
+    print(os.popen("pwd").read())
     with open("settings.json") as settings_json:
         settings = load(settings_json)
     drive = settings["drive-name"]
