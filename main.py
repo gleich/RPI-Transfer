@@ -7,14 +7,14 @@ def main():
     Runs the whole program
     :return: None
     """
-    os.chdir("~/../../media/pi")
+    os.system("cd ~/../../media/pi")
     with open("settings.json") as settings_json:
         settings = load(settings_json)
     drive = settings["drive-name"]
     cards = settings["card-names"]
     if drive == "" or cards[0] == "":
         raise Exception("Please fill in settings.json")
-    drives = os.listdir()
+    drives = os.listdir(".")
     file_paths = []
     for card in cards:
         card_content = os.listdir(card)
